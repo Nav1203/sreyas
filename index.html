@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+body{
+    background-color: black;
+}
+.drop{
+    font-family: 'Open Sans', sans-serif;
+}
+.Subtext{
+    color:rgb(226, 204, 0);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    font-style: italic;
+}
+.img{
+  object-fit: cover;
+}
+.Subtext1{
+    font-size: 50px;
+    color:rgb(226, 204, 0);
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-style: italic;
+}
+.Subbuts{
+    text-align: center;
+
+}
+#dropdown{
+    text-align: center;
+}
+.fade-in-but:hover{
+    background-color: rgb(226, 204, 0);
+    border-color: black;
+    color:black;
+}
+.fade-in-but {
+    font-size: 27px;
+    display: inline-block;
+    background-color:black;
+    text-align: center;
+    color:rgb(226, 204, 0);
+    border-radius: 10px;
+    border-width: 3px;
+    width: 600px;
+    height: 40px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    border-color: rgb(226, 204, 0);
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+
+.fade-in-drop {
+    display: inline-block;
+    background-color:black;
+    color:rgb(226, 204, 0);
+    border-radius: 10px;
+    border-width: 3px;
+    font-size:27px;
+    width: 600px;
+    height:40px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    border-color: rgb(226, 204, 0);
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+}
+.fade-in-image {
+    text-align: center;
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+    #imgdiv{
+        text-align: center;
+    }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+        </style>
+        <script>
+var a;
+            function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+window.onload=async function(){
+    document.getElementById('msg').style.width=screen.width;
+    document.getElementById('Text').style.width=screen.width;
+    document.getElementById('Text2').style.width=screen.width;
+    var i=0;
+    await sleep(1000);
+    var j=0;
+    function typewrite1(){
+        var txt=['Hey idiot','So finally 18 huh?','Click below!'];
+        var id='Text';
+        var speed=100;
+        if(i<txt[j].length){
+            document.getElementById(id).innerHTML+=txt[j].charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt[j].length)
+        {
+            i=0;
+            document.getElementById(id).innerHTML+="<br>"
+            j++;
+            if(j==txt.length)
+            {
+                clearTimeout(a);
+                document.getElementById('but1').removeAttribute("hidden");
+                document.getElementById('but1').className='fade-in-but';
+            }
+        }
+    }
+    typewrite1();
+}
+
+async function click1(){
+    var i=0;
+    var j=0;
+    function typewrite1(){
+        var txt='You came into our life as an unwelcome face,\n Never knowing our friendship We would one day embrace.\nAs we wonder through our thoughts and memories of you,\nIt brings many big smiles and laughter so true.';
+        var id='Text2';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    document.getElementById('Text').innerHTML='';
+    document.getElementById('but1').style.display="none";
+    document.getElementById('imgdiv').innerHTML+='<img id="img" width="900" src="https://drive.google.com/uc?export=view&id=17WKTw8I8cUH7_LkEcC7jtu2PHskNWokp" hidden><br>';
+    await sleep(2000);
+    document.getElementById('img').removeAttribute('hidden');
+    document.getElementById('img').className='fade-in-image';
+    await sleep(6000);
+    typewrite1();
+    await sleep(20000);
+    document.getElementById('but2').removeAttribute('hidden');
+    document.getElementById('but2').className='fade-in-but'
+}
+
+function typeagain(){
+    document.getElementById('imgdiv').innerHTML='';
+    document.getElementById('Text2').innerHTML='';
+    document.getElementById('but2').style.display="none";
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt=['Hey idiot','So finally 18 huh?','Click below!'];
+        var id='Text2';
+        var speed=100;
+        if(i<txt[j].length){
+            document.getElementById(id).innerHTML+=txt[j].charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt[j].length)
+        {
+            i=0;
+            document.getElementById(id).innerHTML+="<br>"
+            j++;
+            if(j==txt.length)
+            {
+                clearTimeout(a);
+                document.getElementById('dropdown').removeAttribute("hidden");
+                document.getElementById('gifts').className='fade-in-drop';
+                document.getElementById('but3').className='fade-in-but';
+            }
+        }
+    }
+    typewrite1();
+}
+function valchos(){
+    var msg=document.getElementById('msg');
+    msg.innerHTML='';
+    var sel=document.getElementById('gifts');
+    var b=sel.options[sel.selectedIndex].value;
+    if (b=='hibs'){
+        console.log('hey');
+        hibs();
+    }
+    else if(b=='nav'){
+        console.log('hello');
+        nav();
+    }
+    else if(b=='ang'){
+        ang();
+    }
+    else if(b=='ren'){
+        ren();
+    }
+    else if(b=='teen'){
+        ten();
+    }
+    else if(b=='bri'){
+        bri();
+    }
+    else if (b=='krt')
+    {
+        krthik();
+    }
+    else if(b=='sre')
+    {
+        sre();
+    }
+    else if(b=='joh')
+    {
+        joh();
+    }
+    else if(b=='ali')
+    {
+        ali();
+    }
+    else if(b=='sudo')
+    {
+        sudo();
+    }
+    else if(b=='playlist')
+    {
+        window.location.replace('https://youtube.com/playlist?list=PL-uN_TH9jymRN6_HwJYAfxTj5GJFDux5m')
+    }
+}
+
+function hibs()
+{
+    clearTimeout(a);
+    var i=0;
+    async function typewrite1(){
+        var txt="Dearest KM \n Ninte bday veraan povaa ennu areechu , nalla pic okke idanam ennu paranju 1 week aayi shalyam cheyyan thudangeet \n Finally here comes the day you have been waiting for. I can literally imagine you sitting with your legs crossed and waiting from 11:50 pm to see how many are wishing you at exact 12am \n Habeebthii, You already know how much you mean to me. I have told it to you before too \n Pakshe onnu maathram parayaam Life in Chavara and VHS would have been soo incomplete without you in it. \nIt's said that People don't come into your life as a coincidence.They come in because they have a role to play and you did play a huge and beautiful role in my life.\nYou are definitely one among the few whom I wouldn't want to lose. \n You came into my life as someone I disliked and I know it was the same for you too \n From disliking each other to disliking the same person together, we have come a long way\nMemories with you would always be really close to my heart \nOkay That's enough of pokkal for you today.\n You know that I would always have your back \nStay the same witchhh \n To many more embarrassing moments and beautiful memories, Happy 20 Annuu \n\nWith lots of Love \n Hiba";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            i=0;
+            document.getElementById(id).innerHTML+="<br>"
+            if(j==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function ang()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    
+    async function typewrite1(){
+        var txt=['To my fav noodles manda :) ', "Eda i really really miss ur cyut face nd ur 'out of this world' expressions. Thank you for adopting my introverted ass during my most lonely period of vellapally hostel.", 'Ennonum njn pryn udheshikunnilla. Ik u miss me tooooo.', 'So have a great year ahead, rock ur day & those gorgeous curlzz!!!', '~Angela'] ;
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function joh()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Happiiee 20 Sreyaaaee!!!\n Have an amazing year ahead and bday adiche polikku. Hve had lots of memories together from 'u teaching me the day before exams' to many many more and I miss u :'). Stay strong always, no matter what happens in life and keep smiling. Ur amazing and once agn Happyy Birthdayyyyy!!! <3";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function krthik()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Happy Birthday My dear friend in Bangalore. Be the same chudail you are";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function ren()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Suuuuuuuup loser, 20 years huh…….future Anasthesia Technician or OT Technician. Almost two years as friends and we met a few months ago. Annu expoyil vechu monthakyatu thanathu njan valand orkunu oof nalla sukham ayirunu. Ini banglore varumbo avidem tharalu pls iniyum vaya kolan. Thank you for the tips on how to be a good boyfriend. Appo Happy birthday undakanni";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function sre()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Hey Sreya\n Happieee birthday mwuthee\nHave a great ,auspicious and a  generous year ahead..party hard\nAdichu powlikk aliyaa..\nMiss u...lotzz of lub\n~Sree";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function bri()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Heyy annachi \n Happy Birthdeiii dee \n 20 ayy mudiyil Nara varathe sookshicho.. eheehee.. ily nd dont kani kaanal tat aisu thendy .. <3";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function nav()
+{
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Dearest Chundelli!, \nWe met almost 3 years back now, and ever since then you have been a crazy idiot. Ur crazy mood swings, 365 degree vaayinottam ithoke kandalum kandalum madukathe items aa..\n Well now you're 20, no more a teenager so buckle up for ur old age grandma *yawning* \n Ur proper Bday wish njan mariyadhek Whatsappil idaam with expressions but as a token on ur 20th Birthday from me, U can keep this message..\n Vayasaayi Grandchildren ne vaayichodtho when i come on TV :)\n - Tom\\Nav\\Kadhaipoma\\Jhingar";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            i=0;
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function ali(){
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="To the greatest (undakanni ) artist ever,\n Here's to being a sexy gift to this world for 20 years (Wohooo),\nYour legendary jokes,expressions and impressions of others including jomon sir's(RESPONSEEE) will never fade from my memory.\n For all my sad nights you were there,thanks patti, \nI hope that every step that you take will be successful \nand just in case I don't say this enough, I LOVE YOUU and no matter how busy we are, or if we don't call each other for months in between, I know the second we do, it'll be old times again and the puttu song will come up and we'll laugh like we're 16 again.\nThank you for being there in my life love.It was a blessing to have you\n ~Alina"
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function sudo(){
+    clearTimeout(a);
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="Happie Bday 🤜🤛🐱🦧☃"
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+function ten()
+{
+    var i=0;
+    var j=0;
+    async function typewrite1(){
+        var txt="MAAAAAAAAAAAAAAAAAAAAAAAA \nhappy birthday annuuuuuuuuuuu!!! \n ahhh dude you've no idea how hard it is to write you something from zee heart....why u like this ma \n I'm just kidding...anyways...I miss you potato head...please come back soon...mathi ninte Bangalore life ahhhhhhhhhhhh \n bro like really.....who would've thought we would even come this close..but I'm glad....and I'm proud to say that you're the only cousin that I'm close to... willingly....\n ahhhh man....I really miss the times we used to fight...not even kidding like legit I learned a lot from you...and plus I got to know you better ...aaru vicharichu nee enganathe oru sadhanam aanenu....kidding kidding \n ahhhhhhhhhhhh bishhhhh can't believe I'm saying this...but I love you my Annuuuuuuu \n I hope you're having fun habeebtiiii...I know life's not fair at times....but live it to the fullest.... don't give a shit abt what others have to say\n man this sounds more like a parting away speech :') baaki njan kalyanathinu parayam \n- Kunju (I know you don't call me that always....but when you do my heart )";
+        var id='msg';
+        var speed=100;
+        if(i<txt.length){
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            i++;
+            a=setTimeout(typewrite1,speed);
+        }
+        if(i==txt.length)
+        {
+            document.getElementById(id).innerHTML+="<br>"
+            if(i==txt.length)
+            {
+                clearTimeout(a);
+            }
+        }
+    }
+    typewrite1();
+}
+        </script>
+    </head>
+    <body>
+        <div id='Text' class='Subtext'>
+        </div>
+        <div class='Subbuts'>
+        <br>
+        <button id='but1' class='buts' onclick='click1()' hidden>
+            Dont forget to scroll after the Reveal!
+        </button>
+        </div>
+        <div id='imgdiv'>
+
+        </div>
+        <div id='Text2' class='Subtext'>
+        </div>
+        <br>
+        <div class='center' style='text-align: center;'>
+        <button id='but2' class='buts' onclick='typeagain()' hidden>
+        Click to Continue
+        </button>
+        </div>
+        <div id='dropdown' class='buts' hidden>
+            <br>
+            <select name="sreyagifts" id='gifts' class='drop'>
+                <option value='hibs' class='drop'>
+                    Hiba's Message
+                </option>
+                <option value='ang' class='drop'>
+                    Angela's Message
+                </option>
+                <option value='ren' class='drop'>
+                    Renil's Messsage
+                </option>
+                <option value='krt' class='drop'>
+                    Karthik's Message
+                </option>
+                <option value='sre' class='drop'>
+                    Sree's Message
+                </option>
+                <option value='joh' class='drop'>
+                    Johvanna's Message
+                </option>
+                <option value='sudo' class='drop'>
+                    Jom's Message
+                </option>
+                <option value='ali' class='drop'>
+                    Alina's Message
+                </option>
+                <option value='teen' class='drop'>
+                    Teena's Message
+                </option>
+                <option value='bri' class='drop'>
+                    Brianna's Message
+                </option>
+                <option value='nav' class='drop'>
+                    Nav's Message
+                </option>
+                <option value='playlist' class='drop'>
+                    A gift for you <3
+                </option>
+            </select>
+            <br>
+            <br>
+            <button id='but3' onclick='valchos()'>
+                Reveal!
+            </button>
+        </div>
+        <div class='Subtext1' id='msg'>
+        </div>
+    </body>
+</html>
