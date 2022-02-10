@@ -284,7 +284,7 @@ function hibs()
         {
             i=0;
             document.getElementById(id).innerHTML+="<br>"
-            if(j==txt.length)
+            if(i==txt.length)
             {
                 clearTimeout(a);
             }
@@ -302,15 +302,17 @@ function ang()
         var txt=['To my fav noodles manda :) ', "Eda i really really miss ur cyut face nd ur 'out of this world' expressions. Thank you for adopting my introverted ass during my most lonely period of vellapally hostel.", 'Ennonum njn pryn udheshikunnilla. Ik u miss me tooooo.', 'So have a great year ahead, rock ur day & those gorgeous curlzz!!!', '~Angela'] ;
         var id='msg';
         var speed=100;
-        if(i<txt.length){
-            document.getElementById(id).innerHTML+=txt.charAt(i);
+        if(i<txt[j].length){
+            document.getElementById(id).innerHTML+=txt[j].charAt(i);
             i++;
             a=setTimeout(typewrite1,speed);
         }
-        if(i==txt.length)
+        if(i==txt[j].length)
         {
+            i=0;
             document.getElementById(id).innerHTML+="<br>"
-            if(i==txt.length)
+            j++;
+            if(j==txt.length)
             {
                 clearTimeout(a);
             }
