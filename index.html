@@ -201,20 +201,24 @@ function typeagain(){
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt=['Hey idiot','So finally 18 huh?','Click below!'];
+        var txt="Well as a last token from all of us on your 20th B'day,| Here's something from all of us,| Something that we hope u can come back and read whenever u miss any of us!|";
         var id='Text2';
         var speed=100;
-        if(i<txt[j].length){
-            document.getElementById(id).innerHTML+=txt[j].charAt(i);
+        if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
-        if(i==txt[j].length)
+        if(i==txt.length)
         {
-            i=0;
             document.getElementById(id).innerHTML+="<br>"
-            j++;
-            if(j==txt.length)
+            if(i==txt.length)
             {
                 clearTimeout(a);
                 document.getElementById('dropdown').removeAttribute("hidden");
