@@ -124,7 +124,8 @@ window.onload=async function(){
     document.getElementById('Text').style.width=screen.width;
     document.getElementById('Text2').style.width=screen.width;
     audio= new Audio('https://drive.google.com/uc?export=download&id=16mGHsZLroBocftfAFD2u6sXQUGtOqXUK');
-    audio.loop='true'
+    audio.muted=true;
+    audio.loop=true;
     var i=0;
     await sleep(1000);
     audio.play();
