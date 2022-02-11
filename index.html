@@ -124,11 +124,15 @@ window.onload=async function(){
     document.getElementById('Text').style.width=screen.width;
     document.getElementById('Text2').style.width=screen.width;
     audio= new Audio('https://drive.google.com/uc?export=download&id=16mGHsZLroBocftfAFD2u6sXQUGtOqXUK');
-    audio.muted=true;
     audio.loop=true;
     var i=0;
     await sleep(1000);
-    audio.play();
+    document.body.addEventListener("touchstart", function () {
+        audio.play()
+    })
+    document.body.addEventListener("click", function () {
+        audio.play()
+    })
     await sleep(1500);
     var j=0;
     function typewrite1(){
