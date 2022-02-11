@@ -126,20 +126,24 @@ window.onload=async function(){
     await sleep(1000);
     var j=0;
     function typewrite1(){
-        var txt=['Hey idiot','So finally 18 huh?','Click below!'];
+        var txt="Ninne korich parayaan aanenkil orupaad ind | Naatumporath kaari , pongacha kaari, ninne polathe oru alavalathi vere undaavum ennu thonunnilla | You and embarrassing moments are a never ending love story | From the happenings during ' The Ride' , Your memorable dance with ' heart pants' , Your undivided love for ER 🖌️🎨|Getting caught by Kareethara Achan for your Sin theta Cos theta act | Shiny Miss inte favorite aaye ninakk Ma'am snehathode vech oru perund😉|I hope you still have the specialised and personalised 'U ' you got on your bday😌|Ithokke ninne ormipichond ninakk njangalde vaga hridayam niranja janmadina aashamsagal";
         var id='Text';
         var speed=100;
-        if(i<txt[j].length){
-            document.getElementById(id).innerHTML+=txt[j].charAt(i);
+        if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
+            document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
-        if(i==txt[j].length)
+        if(i==txt.length)
         {
-            i=0;
             document.getElementById(id).innerHTML+="<br>"
-            j++;
-            if(j==txt.length)
+            if(i==txt.length)
             {
                 clearTimeout(a);
                 document.getElementById('but1').removeAttribute("hidden");
@@ -154,11 +158,17 @@ async function click1(){
     var i=0;
     var j=0;
     function typewrite1(){
-        var txt='You came into our life as an unwelcome face,\n Never knowing our friendship We would one day embrace.\nAs we wonder through our thoughts and memories of you,\nIt brings many big smiles and laughter so true.';
+        var txt='You came into our life as an unwelcome face,| Never knowing our friendship We would one day embrace.| As we wonder through our thoughts and memories of you,| It brings many big smiles and laughter so true.';
         var id='Text2';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -272,11 +282,17 @@ function hibs()
     clearTimeout(a);
     var i=0;
     async function typewrite1(){
-        var txt="Dearest KM \n Ninte bday veraan povaa ennu areechu , nalla pic okke idanam ennu paranju 1 week aayi shalyam cheyyan thudangeet \n Finally here comes the day you have been waiting for. I can literally imagine you sitting with your legs crossed and waiting from 11:50 pm to see how many are wishing you at exact 12am \n Habeebthii, You already know how much you mean to me. I have told it to you before too \n Pakshe onnu maathram parayaam Life in Chavara and VHS would have been soo incomplete without you in it. \nIt's said that People don't come into your life as a coincidence.They come in because they have a role to play and you did play a huge and beautiful role in my life.\nYou are definitely one among the few whom I wouldn't want to lose. \n You came into my life as someone I disliked and I know it was the same for you too \n From disliking each other to disliking the same person together, we have come a long way\nMemories with you would always be really close to my heart \nOkay That's enough of pokkal for you today.\n You know that I would always have your back \nStay the same witchhh \n To many more embarrassing moments and beautiful memories, Happy 20 Annuu \n\nWith lots of Love \n Hiba";
+        var txt="Dearest KM,| Ninte bday veraan povaa ennu areechu , nalla pic okke idanam ennu paranju 1 week aayi shalyam cheyyan thudangeet \n Finally here comes the day you have been waiting for. I can literally imagine you sitting with your legs crossed and waiting from 11:50 pm to see how many are wishing you at exact 12am \n Habeebthii, You already know how much you mean to me. I have told it to you before too \n Pakshe onnu maathram parayaam Life in Chavara and VHS would have been soo incomplete without you in it. \nIt's said that People don't come into your life as a coincidence.They come in because they have a role to play and you did play a huge and beautiful role in my life.\nYou are definitely one among the few whom I wouldn't want to lose. \n You came into my life as someone I disliked and I know it was the same for you too \n From disliking each other to disliking the same person together, we have come a long way\nMemories with you would always be really close to my heart \nOkay That's enough of pokkal for you today.\n You know that I would always have your back \nStay the same witchhh \n To many more embarrassing moments and beautiful memories, Happy 20 Annuu \n\nWith lots of Love \n Hiba";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -325,11 +341,17 @@ function joh()
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="Happiiee 20 Sreyaaaee!!!\n Have an amazing year ahead and bday adiche polikku. Hve had lots of memories together from 'u teaching me the day before exams' to many many more and I miss u :'). Stay strong always, no matter what happens in life and keep smiling. Ur amazing and once agn Happyy Birthdayyyyy!!! <3";
+        var txt="Happiiee 20 Sreyaaaee!!!| Have an amazing year ahead and bday adiche polikku. Hve had lots of memories together from 'u teaching me the day before exams' to many many more and I miss u :'). Stay strong always, no matter what happens in life and keep smiling. Ur amazing and once agn Happyy Birthdayyyyy!!! <3";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -354,7 +376,13 @@ function krthik()
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -400,14 +428,19 @@ function sre()
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="Hey Sreya\n Happieee birthday mwuthee\nHave a great ,auspicious and a  generous year ahead..party hard\nAdichu powlikk aliyaa..\nMiss u...lotzz of lub\n~Sree";
+        var txt="Hey Sreya,| Happieee birthday mwuthee\nHave a great ,auspicious and a  generous year ahead..party hard\nAdichu powlikk aliyaa..\nMiss u...lotzz of lub\n~Sree";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
-        }
         if(i==txt.length)
         {
             document.getElementById(id).innerHTML+="<br>"
@@ -425,11 +458,17 @@ function bri()
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="Heyy annachi \n Happy Birthdeiii dee \n 20 ayy mudiyil Nara varathe sookshicho.. eheehee.. ily nd dont kani kaanal tat aisu thendy .. <3";
+        var txt="Heyy annachi,| Happy Birthdeiii dee \n 20 ayy mudiyil Nara varathe sookshicho.. eheehee.. ily nd dont kani kaanal tat aisu thendy .. <3";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -450,11 +489,17 @@ function nav()
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="Dearest Chundelli!, \nWe met almost 3 years back now, and ever since then you have been a crazy idiot. Ur crazy mood swings, 365 degree vaayinottam ithoke kandalum kandalum madukathe items aa..\n Well now you're 20, no more a teenager so buckle up for ur old age grandma *yawning* \n Ur proper Bday wish njan mariyadhek Whatsappil idaam with expressions but as a token on ur 20th Birthday from me, U can keep this message..\n Vayasaayi Grandchildren ne vaayichodtho when i come on TV :)\n - Tom\\Nav\\Kadhaipoma\\Jhingar";
+        var txt="Dearest Chundelli!,| We met almost 3 years back now, and ever since then you have been a crazy idiot. Ur crazy mood swings, 365 degree vaayinottam ithoke kandalum kandalum madukathe items aa..\n Well now you're 20, no more a teenager so buckle up for ur old age grandma *yawning* \n Ur proper Bday wish njan mariyadhek Whatsappil idaam with expressions but as a token on ur 20th Birthday from me, U can keep this message..\n Vayasaayi Grandchildren ne vaayichodtho when i come on TV :)\n - Tom\\Nav\\Kadhaipoma\\Jhingar";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -474,11 +519,17 @@ function ali(){
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="To the greatest (undakanni ) artist ever,\n Here's to being a sexy gift to this world for 20 years (Wohooo),\nYour legendary jokes,expressions and impressions of others including jomon sir's(RESPONSEEE) will never fade from my memory.\n For all my sad nights you were there,thanks patti, \nI hope that every step that you take will be successful \nand just in case I don't say this enough, I LOVE YOUU and no matter how busy we are, or if we don't call each other for months in between, I know the second we do, it'll be old times again and the puttu song will come up and we'll laugh like we're 16 again.\nThank you for being there in my life love.It was a blessing to have you\n ~Alina"
+        var txt="To the greatest (undakanni ) artist ever,| Here's to being a sexy gift to this world for 20 years (Wohooo),\nYour legendary jokes,expressions and impressions of others including jomon sir's(RESPONSEEE) will never fade from my memory.\n For all my sad nights you were there,thanks patti, \nI hope that every step that you take will be successful \nand just in case I don't say this enough, I LOVE YOUU and no matter how busy we are, or if we don't call each other for months in between, I know the second we do, it'll be old times again and the puttu song will come up and we'll laugh like we're 16 again.\nThank you for being there in my life love.It was a blessing to have you\n ~Alina"
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
@@ -523,11 +574,17 @@ function ten()
     var i=0;
     var j=0;
     async function typewrite1(){
-        var txt="MAAAAAAAAAAAAAAAAAAAAAAAA \nhappy birthday annuuuuuuuuuuu!!! \n ahhh dude you've no idea how hard it is to write you something from zee heart....why u like this ma \n I'm just kidding...anyways...I miss you potato head...please come back soon...mathi ninte Bangalore life ahhhhhhhhhhhh \n bro like really.....who would've thought we would even come this close..but I'm glad....and I'm proud to say that you're the only cousin that I'm close to... willingly....\n ahhhh man....I really miss the times we used to fight...not even kidding like legit I learned a lot from you...and plus I got to know you better ...aaru vicharichu nee enganathe oru sadhanam aanenu....kidding kidding \n ahhhhhhhhhhhh bishhhhh can't believe I'm saying this...but I love you my Annuuuuuuu \n I hope you're having fun habeebtiiii...I know life's not fair at times....but live it to the fullest.... don't give a shit abt what others have to say\n man this sounds more like a parting away speech :') baaki njan kalyanathinu parayam \n- Kunju (I know you don't call me that always....but when you do my heart )";
+        var txt="MAAAAAAAAAAAAAAAAAAAAAAAA | happy birthday annuuuuuuuuuuu!!! | ahhh dude you've no idea how hard it is to write you something from zee heart....why u like this ma \n I'm just kidding...anyways...I miss you potato head...please come back soon...mathi ninte Bangalore life ahhhhhhhhhhhh \n bro like really.....who would've thought we would even come this close..but I'm glad....and I'm proud to say that you're the only cousin that I'm close to... willingly....\n ahhhh man....I really miss the times we used to fight...not even kidding like legit I learned a lot from you...and plus I got to know you better ...aaru vicharichu nee enganathe oru sadhanam aanenu....kidding kidding \n ahhhhhhhhhhhh bishhhhh can't believe I'm saying this...but I love you my Annuuuuuuu \n I hope you're having fun habeebtiiii...I know life's not fair at times....but live it to the fullest.... don't give a shit abt what others have to say\n man this sounds more like a parting away speech :') baaki njan kalyanathinu parayam \n- Kunju (I know you don't call me that always....but when you do my heart )";
         var id='msg';
         var speed=100;
         if(i<txt.length){
+            if(txt.charAt(i)=='|')
+            {
+                document.getElementById(id).innerHTML+='<br>'
+            }
+            else{
             document.getElementById(id).innerHTML+=txt.charAt(i);
+            }
             i++;
             a=setTimeout(typewrite1,speed);
         }
